@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="Affiliate.css" />
+
+  <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="script.js" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+    integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+    integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="text-sum">
+  <div class="container flex flex-col">
+    <div class="nav justify-center fixed">
+      <nav class="navbar">
+        <div class="container-fluid">
+          <h2 class="font-bold text-2xl">Text Summarizer</h2>
+        </div>
+      </nav>
+    </div>
+
+    <div class="sidebar ">
+      <div class="logo-details">
+       <img <a href="https://ibb.co/qdFzYWs"><img src="https://i.ibb.co/qdFzYWs/Original.png" alt="Original" border="0" alt="Avatar" style="width:5px height=10"> 
+        <div class="logo_name">CybraneX</div>
+        <i class='bx bx-menu' id="btn"></i>
+      </div>
+      <ul class="nav-list">
+        <li>
+          <i class='bx bx-search'></i>
+          <input type="text" placeholder="Search...">
+          <span class="tooltip">Search</span>
+        </li>
+                <li>
+          <a href="#">
+            <i class='bx bx-text'></i>
+            <span class="links_name">Summarize</span>
+          </a>
+          <span class="tooltip">Summarize</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class='bx bx-grid-alt'></i>
+            <span class="links_name">Paraphraser</span>
+          </a>
+          <span class="tooltip">Comming soon</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class='bx bx-user'></i>
+            <span class="links_name">Grammer Checker</span>
+          </a>
+          <span class="tooltip">Comming soon</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class='bx bx-chat'></i>
+            <span class="links_name">Plagirism Checker</span>
+          </a>
+          <span class="tooltip">Comming soon</span>
+      </li>
+       <li>
+          <a href="{% url 'get-premium' %}">
+             <i class='bx bx-diamond'></i>
+            <span class="links_name">Premimum</span>
+          </a>
+          <span class="tooltip">Premimum</span>
+        </li>
+
+        <li>
+          <a href="{% url 'payment' %}">
+             <i class='bx bxs-coffee-alt'></i>
+            <span class="links_name">Buy Me a Coffie</span>
+          </a>
+          <span class="tooltip">Buy Me a Coffie</span>
+        </li>
+
+        <li class="profile">
+          <div class="profile-details">
+            <!--<img src="profile.jpg" alt="profileImg">-->
+            <div class="name_job">
+              <div class="name">Text Summarizer</div>
+              <div class="job">CybraneX</div>
+            </div>
+          </div>
+          <i class='bx bx-log-out' id="log_out"></i>
+        </li>
+      </ul>
+    </div>
+    <section class="home-section pl-8">
+      <div class="text-area flex-row  justify-center relative">
+
+         <div class="main_div  hover:bg-white-800 focus:ring-4 focus:ring-white-300  px-5 py-4 mr-2 mb-2">
+           <div class="social_media ">
+             <a href="../loginsignup/login.html"><i class="fab fa-facebook-f"></i></a>
+             <a href="../loginsignup/login.html"><i class="fab fa-twitter"></i></a>
+             <a href="../loginsignup/login.html"><i class="fab fa-instagram"></i></a>
+             <a href="../loginsignup/login.html"><i class="fab fa-google"></i></a>
+           </div>
+         </div>
+        
+         <div class="content">
+           <button class="button-173" role="button"><i class='bx bxs-coffee'> </i>Buy Me a Coffie </button>
+           <button class="button-172" role="button"><i class='bx bx-diamond'> </i>Premimum </button>
+         </div>
+         <div class="heading mt-lg-5"><h1>Earn Big Through Affiliate Sales</h1></div>  
+         <section class="home-section pl-8">
+          <div class="flex flex-col text-center w-full mb-20">
+            <h1 class="sm:text-3xl text-2xl font-medium text-center title-font mb-4 text-gray-900 mt-40"><center>Master Cleanse Reliac Heirloom</center></h1>
+          </div>
+          <section class="master1  text-gray-600 body-font -mt-20">
+            <div class="container px-5 mx-auto">
+              <div class="flex flex-wrap -m-4">
+                <div class="p-4 md:w-1/3">
+                  <div class="h-full rounded-lg overflow-hidden">
+                    <img class="lg:h-26 md:h-24 mx-auto object-cover object-center" src="images/affiliateSignUp.png" alt="blog">
+                    <div class="p-6 text-center">
+                      <h1 class="title-font text-lg font-bold text-gray-900 mb-3">1. Sign Up</h1>
+                      <p class="leading-relaxed mb-3">Sign up in less than a minute</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="p-4 md:w-1/3">
+                  <div class="h-full rounded-lg overflow-hidden">
+                    <img class="lg:h-26 md:h-24 mx-auto object-cover object-center" src="images/affiliateShare.webp" alt="blog">
+                    <div class="p-6 text-center">
+                      <h1 class="title-font text-lg font-bold text-gray-900 mb-3">2. Share</h1>
+                      <p class="leading-relaxed mb-3">Share a URL with your network</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="p-4 md:w-1/3">
+                  <div class="h-full rounded-lg overflow-hidden">
+                    <img class="lg:h-26 md:h-24 mx-auto object-cover object-center" src="images/affiliateMoneyBag.webp" alt="blog">
+                    <div class="p-6 text-center">
+                      <h1 class="title-font text-lg font-bold text-gray-900 mb-3">3. Earn</h1>
+                      <p class="leading-relaxed mb-3">Earn big in multiple ways</p>
+                    </div>
+                  </div>
+                </div>
+               
+                </div>
+              </div>
+            </div>
+      
+            <!--  -->
+            <section class="price text-gray-600 body-font mx-40 rounded-lg">
+      <div class="container px-5 py-24 mx-auto">
+        <div class="flex flex-col text-center w-full mb-20">
+          <h1 class="sm:text-4xl text-3xl font-medium title-font mb-2 text-gray-900">Pricing</h1>
+          <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Banh mi cornhole echo park skateboard authentic crucifix neutra tilde lyft biodiesel artisan direct trade mumblecore 3 wolf moon twee</p>
+        </div>
+        <div class="section flex flex-row">
+        <div class="lg:w-2/6 w-full mx-auto overflow-auto">
+          <table class="table-auto w-full text-left whitespace-no-wrap">
+            <thead>
+              <tr>
+                <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100 rounded-tl rounded-bl">Plan</th>
+                <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">Percentage</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="px-4 py-3">Monthly</td>
+                <td class="px-4 py-3">10%</td>
+                
+              </tr>
+              <tr>
+                <td class="border-t-2 border-gray-200 px-4 py-3">Semi-Annual</td>
+                <td class="border-t-2 border-gray-200 px-4 py-3">15%</td>
+                
+              </tr>
+              <tr>
+                <td class="border-t-2 border-gray-200 px-4 py-3">Annual</td>
+                <td class="border-t-2 border-gray-200 px-4 py-3">20&</td>
+                
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="text1 flex">
+      <h1>Features</h1>
+      <h2>
+        <br><p>30-day cookie window</p>
+        <br><p>Cross-device tracking with a unique URL</p>
+        <br>Dashboard to monitor sales and earnings
+      </h2>
+        </div>
+      </div>
+        <div class="flex pl-4 mt-4 lg:w-2/3 w-full mx-auto">
+          <button class="flex mx-auto text-white bg-indigo-500 border-0 mt-4 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Become an Affiliate</button>
+        </div>
+      </div>
+      </section>
+      
+      <!--  -->
+      <section class="text-gray-600 body-font">
+      <div class="container px-5 py-24 mx-auto">
+        <div class="flex flex-col text-center w-full mb-20">
+          <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Affiliate Qualities</h1>
+        </div>
+        <div class="flex flex-wrap -m-4 text-center">
+          <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+            <div class="border-2 border-gray-200 px-6 py-6 rounded-lg">
+              <i class="fas fa-4x fa-heart"></i>
+              <h2 class="title-font font-medium text-3xl text-gray-900">2.7K</h2>
+              <p class="leading-relaxed">You love us already!</p>
+            </div>
+          </div>
+          <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+            <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+              <i class="fas fa-2x fa-headphones-alt"></i>
+              <h2 class="title-font font-medium text-3xl text-gray-900">1.3K</h2>
+              <p class="leading-relaxed">You use QuillBot and can share your story with friends.</p>
+            </div>
+          </div>
+          <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+            <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+              <i class="fas fa-2x fa-feather-alt"></i>
+              <h2 class="title-font font-medium text-3xl text-gray-900">74</h2>
+              <p class="leading-relaxed">You have an audience of students and professionals.</p>
+            </div>
+          </div>
+          <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+            <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+              <i class="fas fa-2x fa-hand-holding-heart"></i>
+              <h2 class="title-font font-medium text-3xl text-gray-900">46</h2>
+              <p class="leading-relaxed">You're passionate about helping your followers and fans succeed.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      </section>
+      <footer id="footer">
+        <div class="container">
+             <div class="row">
+
+                  <div class="col-md-4 col-sm-6">
+                       <div class="footer-info">
+                            <div class="section-title">
+                                 <h2>Headquarter</h2>
+                            </div>
+                            <address>
+                                 <p>1800 dapibus a tortor pretium,<br> Integer nisl dui, ABC 12000</p>
+                            </address>
+
+                            <ul class="social-icon">
+                                 <li><a href="https://www.facebook.com/cybranex/" class="fa fa-facebook-square" attr="facebook icon"><i class='bx bxl-facebook-circle'></i></a></li>
+                                 <li><a href="https://twitter.com/_CybraneX_" class="fa fa-twitter"><i class='bx bxl-twitter' ></i></a></li>
+                                 <li><a href="https://www.instagram.com/cybranex/" class="fa fa-instagram"><i class='bx bxl-instagram-alt' ></i></a></li>
+                                 <li><a href="https://www.instagram.com/cybranex/" class="fa fa-linked"><i class='bx bxl-linkedin' ></i></i></a></li>
+                            </ul>
+
+                            <div class="copyright-text">
+                                 <p>Copyright &copy; CybraneX</p>
+                            </div>
+                       </div>
+                  </div>
+
+                  <div class="col-md-4 col-sm-6">
+                       <div class="footer-info">
+                            <div class="section-title">
+                                 <h2>Contact Info</h2>
+                            </div>
+                            <address>
+                                 <p>94xxxxxxxx, +66 1800 1100</p>
+                                 <p><a href="mailto:youremail.co">hello@youremail.co</a></p>
+                            </address>
+
+                            
+                       </div>
+                  </div>
+                  <div class="col-md-4 col-sm-6">
+                       <div class="footer-info">
+                            <div class="section-title">
+                                 <h2>About us</h2>
+                            </div>
+                            <address>
+                                      <p>the future of technology CybraneX is an Information-technology Consulting Firm with a vision to be the pioneer in the field of modern science and futuristic technologies such as : AI, Quantum computing, and Blockchain. Our passion for excellence has driven us from the beginning, and continues to drive us into the future. The team at CybraneX knows the relevance of technology and its promise for a sustainable future, we strive to make our products relevant to the meaningful progress of society. Do check out our current projects, amazing content, latest technological products, and get in touch with your questions and requests.
+                                      </p>
+                                 <p><a href="mailto:youremail.co">hello@youremail.co</a></p>
+                            </address>
+
+                            
+                       </div>
+                  </div>
+
+                  <div class="col-md-4 col-sm-12">
+                       
+                  </div>
+
+             </div>
+        </div>
+   </footer>
+          </section>  
+           
+    </section>
+  </div>
+  </div>
+  </div>
+
+
+  
+
+
+    <script>
+      let sidebar = document.querySelector(".sidebar");
+      let closeBtn = document.querySelector("#btn");
+      let searchBtn = document.querySelector(".bx-search");
+
+      closeBtn.addEventListener("click", () => {
+        sidebar.classList.toggle("open");
+        menuBtnChange();//calling the function(optional)
+      });
+
+      searchBtn.addEventListener("click", () => { // Sidebar open when you click on the search iocn
+        sidebar.classList.toggle("open");
+        menuBtnChange(); //calling the function(optional)
+      });
+
+      // following are the code to change sidebar button(optional)
+      function menuBtnChange() {
+        if (sidebar.classList.contains("open")) {
+          closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+        } else {
+          closeBtn.classList.replace("bx-menu-alt-right", "bx-menu");//replacing the iocns class
+        }
+      }
+    </script>
+
+
+
+
+
+
+  </div>
+
+  </section>
+</div>
+  <script>
+    let sidebar = document.querySelector(".sidebar");
+    let closeBtn = document.querySelector("#btn");
+    let searchBtn = document.querySelector(".bx-search");
+
+    closeBtn.addEventListener("click", () => {
+      sidebar.classList.toggle("open");
+      menuBtnChange();//calling the function(optional)
+    });
+
+    searchBtn.addEventListener("click", () => { // Sidebar open when you click on the search iocn
+      sidebar.classList.toggle("open");
+      menuBtnChange(); //calling the function(optional)
+    });
+
+    // following are the code to change sidebar button(optional)
+    function menuBtnChange() {
+      if (sidebar.classList.contains("open")) {
+        closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+      } else {
+        closeBtn.classList.replace("bx-menu-alt-right", "bx-menu");//replacing the iocns class
+      }
+    }
+  </script>
+
+
+
+</body>
+
+</html>

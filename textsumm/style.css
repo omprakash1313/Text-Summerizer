@@ -1,0 +1,569 @@
+/* Google Fonts Import Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* top-navbar */
+/* .contain{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin: 0;   
+} */
+.top-nav-links {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 20px 15px;
+    justify-content: center;
+    width: 100%;
+}
+
+.top-nav-links a {
+    position: relative;
+    color: #333;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 6px 0;
+    text-decoration: none;
+    margin: 0 20px;
+    justify-content: center;
+}
+
+
+
+/* lower navbar */
+head {
+    display: flexbox;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 20px 15px;
+    /* border-radius: 5px; */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    justify-content: center;
+}
+
+.nav-links li {
+    list-style: none;
+    margin: 0 12px;
+}
+
+.nav-links li a {
+    position: relative;
+    color: #333;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 6px 0;
+    text-decoration: none;
+}
+
+.nav-links li a:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 0%;
+    background: #34efdf;
+    border-radius: 12px;
+    transition: all 0.4s ease;
+}
+
+.nav-links li a:hover:before {
+    width: 100%;
+}
+
+.nav-links li.center a:before {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* content */
+section textarea {
+    resize: none;
+    cursor: text;
+    height: 350px;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 20px 25px 20px 20px;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 15px;
+}
+
+.options {
+    margin: 30px;
+}
+
+/* button_hover_1 */
+.button {
+    display: inline-block;
+    border-radius: 15px;
+    background-color: white;
+    border: none;
+    color: black;
+    text-align: center;
+    font-size: 24px;
+    padding: 10px;
+    width: 60px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 1px;
+    /* border-radius: 15px; */
+}
+
+.button:hover {
+    width: 18%;
+    /* border: 1px solid #34efdf; */
+}
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button span:after {
+    content: 'Buy_Me_a_Coffee';
+    position: absolute;
+    opacity: 0;
+    top: 12%;
+    right: -20px;
+    font-size: 16px;
+    font-weight: 400;
+    /* display: inline-flex; */
+    transition: 0.5s;
+}
+
+.button:hover span {
+    padding-right: 160px;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+/* button_hover_2 */
+.button_2 {
+    display: inline-block;
+    border-radius: 15px;
+    background-color: white;
+    /* border: 1px solid #34efdf; */
+    /* border: none; */
+    color: black;
+    text-align: center;
+    font-size: 24px;
+    padding: 10px;
+    width: 60px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 1px;
+    /* border-radius: 15px; */
+}
+
+.button_2:hover {
+    width: 12%;
+}
+
+.button_2 span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button_2 span:after {
+    content: 'Premimum';
+    position: absolute;
+    opacity: 0;
+    top: 12%;
+    right: -20px;
+    font-size: 16px;
+    font-weight: 400;
+    /* display: inline-flex; */
+    transition: 0.5s;
+}
+
+.button_2:hover span {
+    padding-right: 100px;
+}
+
+.button_2:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+/* button_hover_3 */
+.button_3 {
+    display: inline-block;
+    border-radius: 15px;
+    background-color: white;
+    border: none;
+    color: black;
+    text-align: center;
+    font-size: 24px;
+    padding: 10px;
+    width: 60px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 1px;
+    position: absolute;
+    left: 93%;
+}
+
+.button_3:hover {
+    width: 1%;
+}
+
+.button_3 span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button_3 span:after {
+    content: 'Login/Signup';
+    position: absolute;
+    opacity: 0;
+    top: 12%;
+    right: 30px;
+    font-size: 16px;
+    font-weight: 400;
+    /* display: inline-flex; */
+    transition: 0.5s;
+}
+
+.button_3:hover span {
+    padding-left: 20px;
+}
+
+.button_3:hover span:after {
+    opacity: 1;
+    left: 10;
+}
+
+/* textarea */
+textarea {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+}
+
+.Text a button {
+    border: 1px solid black;
+    padding: .5rem 1rem .5rem 1rem;
+    border-radius: 15px;
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.Text a input {
+    border: 1px solid black;
+    padding: .5rem 1rem .5rem 1rem;
+    border-radius: 15px;
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.Text a .get_btn {
+    margin-left: 190px;
+}
+
+.Text .btn_2 {
+    justify-content: center;
+}
+
+.matter img {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (min-device-width: 1201px) and (max-device-width: 1535px) {
+    .Text {
+        width: 100%;
+    }
+
+    .nav-links li a {
+        font-size: 15px;
+        font-weight: 400;
+    }
+
+    .button {
+        /* margin-left: 20px; */
+    }
+
+    .button_3 {
+        left: 90%;
+    }
+
+    .background {
+        width: 115%;
+        margin-left: -75px;
+    }
+
+    .form-control {
+        height: 60vh;
+        font-size: 16px;
+    }
+
+    .Text a .get_btn {
+        margin-left: 600px;
+    }
+
+    .button_2,
+    .button {
+        font-size: 20px;
+        padding: 10px;
+        width: 60px;
+    }
+
+    .button_2:hover span {
+        padding-right: 80px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .button span:after {
+        padding-right: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .button span:after,
+    .button_2 span:after {
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .container-title {
+        justify-content: center;
+        margin: 0 40px 0 40px;
+        position: relative;
+        display: flex;
+        font-size: 30px;
+    }
+
+    .text-base {
+        margin-top: 20px;
+
+    }
+}
+
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+
+  }
+
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+  
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: 150%;
+    left: 20%;
+  }
+  
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+
+@media screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    .nav-links li a {
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .Text {
+        width: 100%;
+    }
+        .background {
+            width: 115%;
+            margin-left: -55px;
+        }
+.form-control {
+    height: 30vh;
+    font-size: 20px;
+}
+ .Text a .get_btn {
+     margin-left: 320px;
+     font-size: 15px;
+     font-weight: 800;
+ }
+ .Text a .upload_btn{
+font-size: 14px;
+    font-weight: 800;
+ }
+ .Text a .Download_btn{
+    font-size: 16px;
+        font-weight: 800;
+ }
+ .button_3 {
+     left: 88%;
+ }
+ .button {
+     margin-left: 22px;
+ }
+ .container-title {
+     justify-content: center;
+     margin: 0 40px 0 40px;
+     position: relative;
+     display: flex;
+     font-size: 30px;
+}
+.text-base {
+    margin-top: 20px;
+
+}
+.advertise .container{
+    padding: 120px 40px 120px 40px;
+}
+}
+@media screen and (min-device-width: 481px) and (max-device-width: 768px) {
+.nav-links li a {
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .Text {
+        width: 100%;
+    }
+
+    .background {
+        width: 115%;
+        margin-left: -55px;
+    }
+
+    .form-control {
+        height: 30vh;
+        font-size: 20px;
+    }
+
+    .Text a .get_btn {
+        margin-left: 320px;
+        font-size: 15px;
+        font-weight: 800;
+    }
+
+    .Text a .upload_btn {
+        font-size: 14px;
+        font-weight: 800;
+    }
+
+    .Text a .Download_btn {
+        font-size: 16px;
+        font-weight: 800;
+    }
+
+    .button_3 {
+        left: 88%;
+    }
+
+    .button {
+        margin-left: 22px;
+    }
+
+    .container-title {
+        justify-content: center;
+        margin: 0 40px 0 40px;
+        position: relative;
+        display: flex;
+        font-size: 30px;
+    }
+
+    .text-base {
+        margin-top: 20px;
+
+    }
+
+    .advertise .container {
+        padding: 120px 40px 120px 40px;
+    }
+}
+@media screen and (min-device-width: 769px) and (max-device-width: 1024px) {
+.nav-links li a {
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .Text {
+        width: 100%;
+    }
+
+    .background {
+        width: 115%;
+        margin-left: -55px;
+    }
+
+    .form-control {
+        height: 30vh;
+        font-size: 20px;
+    }
+
+    .Text a .get_btn {
+        margin-left: 320px;
+        font-size: 15px;
+        font-weight: 800;
+    }
+
+    .Text a .upload_btn {
+        font-size: 14px;
+        font-weight: 800;
+    }
+
+    .Text a .Download_btn {
+        font-size: 16px;
+        font-weight: 800;
+    }
+
+    .button_3 {
+        left: 88%;
+    }
+
+    .button {
+        margin-left: 22px;
+    }
+
+    .container-title {
+        justify-content: center;
+        margin: 0 40px 0 40px;
+        position: relative;
+        display: flex;
+        font-size: 30px;
+    }
+
+    .text-base {
+        margin-top: 20px;
+
+    }
+
+    .advertise .container {
+        padding: 120px 40px 120px 40px;
+    }
+}
